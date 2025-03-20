@@ -1,22 +1,29 @@
 import reflex as rx
-from Mi_portfolio.constants.styles import PADDING_MEDIUM, MARGIN_MEDIUM, MAX_WIDTH_MEDIUM
+from Mi_portfolio.constants.styles import PADDING_MEDIUM
+
+CARD_WIDTH = "300px"
+CARD_HEIGHT = "200px"
 
 def project_card(text, color):
     return rx.box(
-        rx.text(
-            text,
-            font_size="1.2em",
-            font_weight="bold",
-            overflow="hidden",
-            text_overflow="ellipsis",
-            white_space="normal"
+        rx.scroll_area(
+            rx.text(
+                text,
+                font_size="1em",
+                font_weight="bold",
+                white_space="normal",  
+            ),
+            height="100%",
+            overflow_x="hidden", 
+            overflow_y="auto",   
+            type="auto",         
+            padding=PADDING_MEDIUM,     
         ),
-        
-        padding=PADDING_MEDIUM,      # ✅ Usa valor centralizado
         border=f"2px solid {color}",
         border_radius="8px",
         box_shadow="md",
-        margin=MARGIN_MEDIUM,        # ✅ Usa valor centralizado
-        width="100%",
-        max_width=MAX_WIDTH_MEDIUM   # ✅ Usa valor centralizado
+        width=CARD_WIDTH,
+        height=CARD_HEIGHT,
+        flex_shrink=0,
+        overflow="hidden",
     )
