@@ -1,17 +1,22 @@
 import reflex as rx
+from Mi_portfolio.constants.styles import PADDING_MEDIUM, MARGIN_MEDIUM, MAX_WIDTH_MEDIUM
 
-def project_card(title, description, image_url, link_url):
+def project_card(text, color):
     return rx.box(
-        rx.image(src=image_url, border_radius="8px"),
-        rx.vstack(
-            rx.text(title, font_size="1.2em", font_weight="bold"),
-            rx.text(description),
-            rx.link("Ver más →", href=link_url, color="#3182ce"),
-            spacing=3,
-            padding="1em",
+        rx.text(
+            text,
+            font_size="1.2em",
+            font_weight="bold",
+            overflow="hidden",
+            text_overflow="ellipsis",
+            white_space="normal"
         ),
-        border="1px solid #eaeaea",
+        
+        padding=PADDING_MEDIUM,      # ✅ Usa valor centralizado
+        border=f"2px solid {color}",
         border_radius="8px",
-        overflow="hidden",
-        box_shadow="sm",
+        box_shadow="md",
+        margin=MARGIN_MEDIUM,        # ✅ Usa valor centralizado
+        width="100%",
+        max_width=MAX_WIDTH_MEDIUM   # ✅ Usa valor centralizado
     )

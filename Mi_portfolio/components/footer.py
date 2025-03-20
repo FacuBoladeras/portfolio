@@ -1,16 +1,13 @@
 import reflex as rx
 
 def footer():
-    return rx.box(
-        rx.text("© 2025 [Tu Nombre]. Todos los derechos reservados.", font_size="0.9em"),
-        rx.hstack(
-            rx.link("GitHub", href="https://github.com/tu-usuario", is_external=True),
-            rx.link("LinkedIn", href="https://www.linkedin.com/in/tu-usuario", is_external=True),
-            spacing=3,
-            justify_content="center"
-        ),
+    return rx.vstack(
+        rx.text("Facundo Boladeras."),
+        rx.text("Email: facuboladeras@gmail.com"),
+        rx.text("GitHub: https://github.com/facundo"),
+        spacing="2",  # Separación entre líneas internas
         padding="1em",
-        border_top="1px solid #eaeaea",
-        text_align="center",
-        margin_top="2em"
+        align_items="center",
+        margin="2em 0 0 0",  # Separación entre footer y contenido anterior
+        border_top="1px solid #eaeaea"
     )
