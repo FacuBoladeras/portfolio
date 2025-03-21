@@ -2,30 +2,53 @@ import reflex as rx
 from Mi_portfolio.components.project_card import project_card
 from Mi_portfolio.constants.styles import SPACING_MEDIUM, PADDING_MEDIUM
 
+
 projects = [
     {
-        "text": "Pizza Margarita\n\nIngredientes:\n- Harina\n- Tomate\n- Mozzarella\n- Albahaca fresca\n- Aceite de oliva",
-        "color": "#FF5733"
+        "color": "#6ea7cf",
+        "image": "/uader.png",
+        "items": [
+            "Harina",
+            "Tomate",
+            "Mozzarella",
+        ]
     },
     {
-        "text": "Pasta al Pesto\n\nIngredientes:\n- Pasta\n- Albahaca\n- Piñones\n- Ajo\n- Aceite de oliva\n- Queso parmesano",
-        "color": "#33FF57"
+        "color": "#6ea7cf",
+        "image": "/uader.png",
+        "items": [
+            "Pasta",
+            "Albahaca",
+            "Piñones",
+            "Ajo",
+        ]
     },
     {
-        "text": "Ensalada César\n\nIngredientes:\n- Lechuga romana\n- Crutones\n- Pollo\n- Salsa César\n- Parmesano",
-        "color": "#5733FF"
+        "color": "#6ea7cf",
+        "image": "/uader.png",
+        "items": [
+            "Lechuga",
+            "Pollo",
+            "Parmesano",
+        ]
     },
     {
-        "text": "Tacos de Pollo\n\nIngredientes:\n- Tortillas\n- Pollo\n- Aguacate\n- Cebolla\n- Limón\n- Cilantro fresco",
-        "color": "#FFC300"
+        "color": "#6ea7cf",
+        "image": "/uader.png",
+        "items": [
+            "Tortilla",
+            "Pollo",
+            "Aguacate",
+        ]
     },
     {
-        "text": "Batido de Frutas\n\nIngredientes:\n- Banana\n- Fresas\n- Yogur natural\n- Miel\n- Leche de almendras",
-        "color": "#DAF7A6"
-    },
-    {
-        "text": "Brownies de Chocolate\n\nIngredientes:\n- Chocolate\n- Mantequilla\n- Huevos\n- Harina\n- Azúcar\n- Nueces picadas",
-        "color": "#C70039"
+        "color": "#6ea7cf",
+        "image": "/uader.png",
+        "items": [
+            "Banana",
+            "Yogur",
+            "Miel",
+        ]
     },
 ]
 
@@ -40,12 +63,16 @@ def projects_page():
         rx.box(
             rx.scroll_area(
                 rx.hstack(
-                    *[project_card(p["text"], p["color"]) for p in projects],
+                    # ✅ Iteración correcta sobre la lista de diccionarios
+                    *[
+                        project_card(p["color"], p["image"], p["items"])
+                        for p in projects
+                    ],
                     spacing=SPACING_MEDIUM,
                     align_items="center",
                     justify_content="flex-start",
                 ),
-                type="always",  # ✅ Barra horizontal siempre visible
+                type="always",
                 # overflow_x="scroll",
                 width=visible_width,
                 style={
@@ -55,10 +82,12 @@ def projects_page():
                 },
             ),
             padding_bottom=SPACING_MEDIUM,
+            border="1px solid black",
+            border_radius="16px"
+
         ),
         padding=PADDING_MEDIUM,
         align_items="center",
         justify_content="center",
         width="100%",
     )
-

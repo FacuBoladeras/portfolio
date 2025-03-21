@@ -1,29 +1,45 @@
 import reflex as rx
-from Mi_portfolio.constants.styles import PADDING_MEDIUM
+from Mi_portfolio.constants.styles import PADDING_MEDIUM,PADDING_LARGE,PADDING_EXTRA_LARGE,PADDING_SMALL
 
 CARD_WIDTH = "300px"
-CARD_HEIGHT = "200px"
+CARD_HEIGHT = "300px"
+IMAGE_HEIGHT = "120px"  # ✅ Altura fija para la imagen
 
-def project_card(text, color):
+def project_card(color, image_url, items):
     return rx.box(
-        rx.scroll_area(
-            rx.text(
-                text,
-                font_size="1em",
-                font_weight="bold",
-                white_space="normal",  
+        rx.vstack(
+            # Imagen
+            rx.image(
+                src=image_url,
+                width="40%",
+                height="auto",
+                object_fit="contain",
+                border_top_radius="6px",
+                margin="0 auto",
+                padding_top=PADDING_SMALL,
+                padding_bottom=PADDING_SMALL
             ),
-            height="100%",
-            overflow_x="hidden", 
-            overflow_y="auto",   
-            type="auto",         
-            padding=PADDING_MEDIUM,     
+            # Hstack con listas
+            rx.hstack(
+                        rx.list(
+                            *[
+                                rx.hstack(
+                                    rx.icon("circle_check_big", color="green"),
+                                    rx.text(item),
+                                )
+                                for item in items
+                            ]
+                        ),
+
+                
+            ),
         ),
         border=f"2px solid {color}",
         border_radius="8px",
         box_shadow="md",
-        width=CARD_WIDTH,
-        height=CARD_HEIGHT,
+        width="300px",
+        padding=PADDING_EXTRA_LARGE,
+        height="300px",
         flex_shrink=0,
         overflow="hidden",
     )
