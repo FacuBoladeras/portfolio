@@ -14,7 +14,7 @@ def project_card(color, image_url, items):
                 width="40%",
                 height="auto",
                 object_fit="contain",
-                border_top_radius="6px",
+                border_top_radius="0px",
                 margin="0 auto",
                 padding_top=PADDING_SMALL,
                 padding_bottom=PADDING_SMALL
@@ -35,7 +35,7 @@ def project_card(color, image_url, items):
             ),
         ),
         border=f"2px solid {color}",
-        border_radius="8px",
+        border_radius="0px",
         box_shadow="md",
         width="300px",
         padding=PADDING_EXTRA_LARGE,

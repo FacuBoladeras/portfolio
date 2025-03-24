@@ -5,22 +5,22 @@ def linkedin_page():
     linkedin_links = [
         {
             "link": "https://www.linkedin.com/posts/facundo-boladeras-382043292_m%C3%A9todo-kde-para-estimar-densidades-generar-activity-7301384179869507584-Oz6k?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEbXOlIBq6apVMLzAn9FUv1dX_UA7q3sNSA",
-            "image_url": "https://media.licdn.com/dms/image/v2/D4D22AQHCfWAPdahEgQ/feedshare-shrink_800/B4DZVO6NU.HIAg-/0/1740785640128?e=1745452800&v=beta&t=uNWYfRBJN--DIm2_vsADLxEz8PUHimGtfejOEW-kfNs",
+            "image_url": "/heatmap.jpg",
             "description": "Heatmap"
         },
         {
             "link": "https://www.linkedin.com/posts/facundo-boladeras-382043292_estimacion-de-bosques-implantados-mediante-activity-7265337631884910592-P3r3?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEbXOlIBq6apVMLzAn9FUv1dX_UA7q3sNSA",
-            "image_url": "https://media.licdn.com/dms/image/v2/D4D22AQEPfzq0f2B6Bw/feedshare-shrink_800/feedshare-shrink_800/0/1732191473078?e=1745452800&v=beta&t=Un_IlSsKPr03SVJgbXT6QBiQ4C_GJkET1uHrj9IRhdk",
+            "image_url": "/deep L.jpg",
             "description": "Deep learning"
         },
         {
-            "link": "https://www.linkedin.com/posts/facundo-boladeras-382043292_geemap-python-activity-7218685252397875201-5-B5?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEbXOlIBq6apVMLzAn9FUv1dX_UA7q3sNSA",
-            "image_url": "https://media.licdn.com/dms/image/v2/D4D22AQEUw3gSw6UJaw/feedshare-shrink_2048_1536/feedshare-shrink_2048_1536/0/1721068679666?e=1745452800&v=beta&t=CSkKfzp1eTcc-_RvXvqIQSFfVWiQJtu2x9oLwtCWiUM",
+            "link": "https://www.linkedin.com/posts/facundo-boladeras-382043292_mofuss-python-globalecosystemsdynamicinvestigation-activity-7224546612184850434-HLmc?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEbXOlIBq6apVMLzAn9FUv1dX_UA7q3sNSA",
+            "image_url": "/biomass.jpg",
             "description": "Biomass estimate"
         },
         {
-            "link": "https://www.linkedin.com/posts/facundo-boladeras-382043292_mofuss-python-globalecosystemsdynamicinvestigation-activity-7224546612184850434-HLmc?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEbXOlIBq6apVMLzAn9FUv1dX_UA7q3sNSA",
-            "image_url": "https://media.licdn.com/dms/image/v2/D4D22AQHoSjClh0ay6w/feedshare-shrink_800/feedshare-shrink_800/0/1722466137150?e=1745452800&v=beta&t=jBsmvsJ755LUjmsAIjmONMRdfQAgxrmFYaJe91JuJFM",
+            "link": "https://www.linkedin.com/posts/facundo-boladeras-382043292_python-aws-lambda-activity-7168324246182604800-54qb?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEbXOlIBq6apVMLzAn9FUv1dX_UA7q3sNSA",
+            "image_url": "/lass.jpg",
             "description": "Moffus"
         },
     ]

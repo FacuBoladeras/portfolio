@@ -8,14 +8,14 @@ projects = [
         "color": "#6ea7cf",
         "image": "/uader.png",
         "items": [
-            "Harina",
+            "Estudios de territorio",
             "Tomate",
             "Mozzarella",
         ]
     },
     {
         "color": "#6ea7cf",
-        "image": "/uader.png",
+        "image": "/conicet_logo.jpg",
         "items": [
             "Pasta",
             "Albahaca",
@@ -25,16 +25,7 @@ projects = [
     },
     {
         "color": "#6ea7cf",
-        "image": "/uader.png",
-        "items": [
-            "Lechuga",
-            "Pollo",
-            "Parmesano",
-        ]
-    },
-    {
-        "color": "#6ea7cf",
-        "image": "/uader.png",
+        "image": "/logo-ee.jpg",
         "items": [
             "Tortilla",
             "Pollo",
@@ -43,7 +34,7 @@ projects = [
     },
     {
         "color": "#6ea7cf",
-        "image": "/uader.png",
+        "image": "/deorigen_la_logo.jpg",
         "items": [
             "Banana",
             "Yogur",
