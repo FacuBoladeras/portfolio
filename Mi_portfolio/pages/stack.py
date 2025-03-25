@@ -3,10 +3,11 @@ import reflex as rx
 def stack():
     # Lista de logos con sus respectivas rutas
     logos = [
-        "/logos/python.png",
-        "/logos/react.png",
-        "/logos/docker.png",
-        "/logos/github.png",
+        "/icons8-python-96.png",
+        "/icons8-aws-96.png",
+        "/icons8-mysql-96.png",
+        "/icons8-git-96.png",
+        "/icons8-google-earth-96.png"
     ]
 
     # Usar rx.hstack para una fila horizontal
@@ -21,7 +22,7 @@ def stack():
             )
             for logo in logos
         ],
-        spacing="4",  # Espacio entre los logos
+        spacing="6",  # Espacio entre los logos
         align_items="center",
         justify_content="center",
         padding="16px"

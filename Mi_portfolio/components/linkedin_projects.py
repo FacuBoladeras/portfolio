@@ -18,29 +18,21 @@ def linkedin_project_box(link, image_url, description=None):
                 margin_top="8px", 
                 text_align="center"
             ),
-            # Botón con el icono de LinkedIn
-            rx.button(
-                rx.icon("linkedin", margin_right="8px"),
-                rx.text("View Post"),
-                on_click=lambda: rx.redirect(link),  # Redirige al link
-                bg="#0A66C2",  # Color de fondo tipo LinkedIn
-                color="white",
-                _hover={"bg": "#005582"},  # Cambio de color al pasar el mouse
-                border_radius="0px",
-                width="100%",
-                margin_top="auto",  # Empuja el botón hacia abajo
-            ),
             align_items="stretch",
-            justify_content="space-between",  # Espacio entre elementos
-            height="100%",  # Asegura que el vstack ocupe toda la altura
+            justify_content="space-between",
+            height="100%",
         ),
         border="2px solid #0A66C2",  # Color de LinkedIn
         border_radius="0px",
         padding="0px",
         width="300px",
-        height="300px",
+        height="200px",
         box_shadow="md",
         margin="12px",
         display="flex",
-        flex_direction="column",  # Asegura que los hijos se apilen verticalmente
+        flex_direction="column",
+        on_click=lambda: rx.redirect(link),  # Hace que todo el box sea clickeable
+        cursor="pointer",  # Cambia el cursor para indicar que es un link
+        _hover={"box_shadow": "lg"},  # Efecto al pasar el mouse
     )
+
