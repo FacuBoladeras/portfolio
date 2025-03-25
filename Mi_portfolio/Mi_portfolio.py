@@ -12,13 +12,13 @@ from Mi_portfolio.constants.styles import PADDING_SMALL, PADDING_MEDIUM, MARGIN_
 def index():
     return rx.vstack(
         header(),
-        rx.text("Experiencia", size= '9', weight="bold", high_contrast=True, font_family=PIXEL_FONT_LARGE),
-        projects_page(),
-        rx.text("Stack tecnológico", size= '9', weight="bold", high_contrast=True, font_family=PIXEL_FONT_LARGE),
+        rx.text("Experiencia", size='9',  weight="bold",   high_contrast=True,   font_family="Pixelify Sans",    class_name="title-secondary" ),        
+        projects_page(font_family="Doto"),
+        rx.text("Stack tecnológico", size='9', weight="bold", high_contrast=True,font_family="Pixelify Sans", class_name="title-secondary"),
         stack(),
-        rx.text("Proyectos GIS", size= '9', weight="bold", high_contrast=True, font_family=PIXEL_FONT_LARGE),
+        rx.text("Proyectos GIS", size='9', weight="bold", high_contrast=True,font_family="Pixelify Sans", class_name="title-secondary"),
         linkedin_page(),
-        rx.text("Proyectos Freelance", size= '9', weight="bold", high_contrast=True, font_family=PIXEL_FONT_LARGE),
+        rx.text("Proyectos Freelance", size='9', weight="bold", high_contrast=True,font_family="Pixelify Sans", class_name="title-secondary"),
         linkedin_page_freelance(),
         footer(),
         spacing="9",
@@ -33,5 +33,13 @@ def index():
     )
 
 
-app = rx.App()
+app = rx.App(
+    stylesheets=[
+        'https://fonts.googleapis.com/css2?family=Sixtyfour&display=swap',
+        'https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap',
+        'https://fonts.googleapis.com/css2?family=Doto:wght@100..900&display=swap',
+        "/styles.css",        
+    ]
+)
+
 app.add_page(index, route="/")

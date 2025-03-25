@@ -5,7 +5,7 @@ CARD_WIDTH = "300px"
 CARD_HEIGHT = "300px"
 IMAGE_HEIGHT = "120px"  # ✅ Altura fija para la imagen
 
-def project_card(color, image_url, items):
+def project_card(color, image_url, items, font_family=None):
     return rx.box(
         rx.vstack(
             # Imagen
@@ -14,8 +14,8 @@ def project_card(color, image_url, items):
                 width="150px",         # Ancho fijo
                 height="100px",        # Altura fija
                 object_fit="cover",    # Asegúrate de que la imagen llena el área definida
-                border_radius="10px 50px",
-                border="5px solid #555",
+                border_radius="0px",
+                border="4px solid #555",
                 margin="0 auto",
                 padding_top=PADDING_SMALL,
                 padding_bottom=PADDING_SMALL,
@@ -26,7 +26,7 @@ def project_card(color, image_url, items):
                     *[
                         rx.hstack(
                             rx.icon("circle_check_big", color="green"),
-                            rx.text(item),
+                            rx.text(item, font_family=font_family, class_name="content"),  # Añade la clase aquí
                         )
                         for item in items
                     ]
@@ -44,3 +44,5 @@ def project_card(color, image_url, items):
         overflow="hidden",
         align="center",  # Cambiado a "align"
     )
+
+

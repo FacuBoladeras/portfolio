@@ -47,12 +47,12 @@ VISIBLE_CARDS = 3
 CARD_WIDTH = 300
 CARD_SPACING = 16
 
-def projects_page():
+def projects_page(font_family):
     return rx.vstack(
         rx.hstack(
             # ✅ Iteración directa sobre la lista de diccionarios
             *[
-                project_card(p["color"], p["image"], p["items"])
+                project_card(p["color"], p["image"], p["items"], font_family=font_family)
                 for p in projects
             ],
             spacing=SPACING_MEDIUM,
@@ -64,5 +64,6 @@ def projects_page():
         justify_content="center",
         width="100%",
     )
+
 
 
