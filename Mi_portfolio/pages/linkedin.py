@@ -6,7 +6,7 @@ def linkedin_page(font_family="Tektur"):
         {
             "link": "https://www.linkedin.com/posts/facundo-boladeras-382043292_m%C3%A9todo-kde-para-estimar-densidades-generar-activity-7301384179869507584-Oz6k?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEbXOlIBq6apVMLzAn9FUv1dX_UA7q3sNSA",
             "image_url": "/heatmap.jpg",
-            "description": "Heatmap"
+            "description": "Python scripting"
         },
         {
             "link": "https://www.linkedin.com/posts/facundo-boladeras-382043292_estimacion-de-bosques-implantados-mediante-activity-7265337631884910592-P3r3?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEbXOlIBq6apVMLzAn9FUv1dX_UA7q3sNSA",
