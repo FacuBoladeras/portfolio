@@ -1,8 +1,8 @@
 # Valores para padding
-PADDING_SMALL = "4px"
-PADDING_MEDIUM = "8px"
-PADDING_LARGE = "16px"
-PADDING_EXTRA_LARGE = "24px"
+PADDING_SMALL = "8px"
+PADDING_MEDIUM = "16px"
+PADDING_LARGE = "32px"
+PADDING_EXTRA_LARGE = "40px"
 
 
 # Valores para margin

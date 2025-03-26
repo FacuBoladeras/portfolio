@@ -1,10 +1,13 @@
 import reflex as rx
+from Mi_portfolio.constants.styles import PADDING_SMALL, PADDING_MEDIUM, MARGIN_MEDIUM, MAX_WIDTH_MEDIUM
+
+
 
 def header(title_font_family="Tektur", title_class_name="title-primary", content_font_family="Roboto", content_class_name="content"):
     return rx.vstack(
         # Encabezado principal
         rx.text(
-            "Mi Portfolio GIS",            
+            "My GIS Portfolio",            
             font_weight="bold",
             text_align="center",
             font_family=title_font_family,
@@ -22,7 +25,7 @@ def header(title_font_family="Tektur", title_class_name="title-primary", content
             # Texto a la izquierda
             rx.box(
                 rx.text(
-                    "Hello 👋 my name is Facundo Boladeras, I'm a Biology graduate from the Universidad Autónoma de Entre Ríos, "
+                    "Hello my name is Facundo Boladeras, I'm a Biology graduate from the Universidad Autónoma de Entre Ríos, "
                     "currently pursuing a PhD through a CONICET scholarship.\n\n"
                     "I specialize in Geographic Information Systems (GIS) with strong experience in technologies "
                     "like Python and Google Earth Engine, combining skills in data science and geoprocessing.",
@@ -30,7 +33,7 @@ def header(title_font_family="Tektur", title_class_name="title-primary", content
                     class_name=content_class_name
                 ),
                 max_width="800px",
-                padding="20px",
+                padding=PADDING_MEDIUM,
             ),
             # Avatar y enlaces a la derecha
             rx.vstack(
@@ -68,5 +71,6 @@ def header(title_font_family="Tektur", title_class_name="title-primary", content
             spacing="1",
         ),
         # Agrega padding superior aquí
-        padding_top="80px",  # Ajusta este valor según lo que necesites
+        padding_top="80px",
+        padding_bottom="80px"# Ajusta este valor según lo que necesites
     )
