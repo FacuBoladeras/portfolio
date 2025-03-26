@@ -1,13 +1,14 @@
 import reflex as rx
 
-def header():
+def header(title_font_family="Tektur", title_class_name="title-primary", content_font_family="Roboto", content_class_name="content"):
     return rx.vstack(
         # Encabezado principal
         rx.text(
-            "Mi Portfolio - Encabezado",
-            font_size="1.5em",
+            "Mi Portfolio GIS",            
             font_weight="bold",
             text_align="center",
+            font_family=title_font_family,
+            class_name=title_class_name,
         ),
         # Línea divisoria
         rx.box(
@@ -19,17 +20,24 @@ def header():
         # Contenido principal del header
         rx.hstack(
             # Texto a la izquierda
-            rx.text(
-                "Este es mi portfolio personal donde comparto mis proyectos y experiencias.",
-                font_size="1em",
-                flex="1",
+            rx.box(
+                rx.text(
+                    "Hello 👋 my name is Facundo Boladeras, I'm a Biology graduate from the Universidad Autónoma de Entre Ríos, "
+                    "currently pursuing a PhD through a CONICET scholarship.\n\n"
+                    "I specialize in Geographic Information Systems (GIS) with strong experience in technologies "
+                    "like Python and Google Earth Engine, combining skills in data science and geoprocessing.",
+                    font_family=content_font_family,
+                    class_name=content_class_name
+                ),
+                max_width="800px",
+                padding="20px",
             ),
             # Avatar y enlaces a la derecha
             rx.vstack(
                 # Avatar arriba
                 rx.avatar(
                     name="Facundo M",
-                    src="/avatar.jpg",                    
+                    src="/avatar.jpg",
                     size="9",
                     margin_bottom="8px",
                     radius="full",
@@ -54,9 +62,11 @@ def header():
                     ),
                     spacing="1",
                 ),
-                align_items="center",  # Centra el avatar y los botones en su contenedor
-                spacing="1",  # Espaciado entre elementos del vstack
+                align_items="center",
+                spacing="1",
             ),
-            spacing="1",  # Espaciado entre el texto y el contenedor del avatar
-        )
+            spacing="1",
+        ),
+        # Agrega padding superior aquí
+        padding_top="80px",  # Ajusta este valor según lo que necesites
     )

@@ -8,43 +8,42 @@ projects = [
         "color": "#6ea7cf",
         "image": "/ceregeo.png",
         "items": [
-            "Estudios de territorio",
-            "Tomate",
-            "Mozzarella",
+            "+4 years",
+            "Research",
+            "GIS/Python",
         ]
     },
     {
         "color": "#6ea7cf",
         "image": "/conicet_logo.jpg",
         "items": [
-            "Pasta",
-            "Albahaca",
-            "Piñones",
-            "Ajo",
+            "+2 years",
+            "Research",
+            "GIS/Science",            
         ]
     },
     {
         "color": "#6ea7cf",
         "image": "/logo-ee.jpg",
         "items": [
-            "Tortilla",
-            "Pollo",
-            "Aguacate",
+            "+3 months",
+            "Teaching",
+            "Python/GIS",
         ]
     },
     {
         "color": "#6ea7cf",
         "image": "/deorigen_la_logo.jpg",
         "items": [
-            "Banana",
-            "Yogur",
-            "Miel",
+            "+1 year",
+            "Developed",
+            "Python/GIS",
         ]
     },
 ]
 
 VISIBLE_CARDS = 3
-CARD_WIDTH = 300
+CARD_WIDTH = 400
 CARD_SPACING = 16
 
 def projects_page(font_family):

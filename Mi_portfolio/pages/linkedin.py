@@ -1,7 +1,7 @@
 import reflex as rx
 from Mi_portfolio.components.linkedin_projects import linkedin_project_box
 
-def linkedin_page():
+def linkedin_page(font_family="Tektur"):
     linkedin_links = [
         {
             "link": "https://www.linkedin.com/posts/facundo-boladeras-382043292_m%C3%A9todo-kde-para-estimar-densidades-generar-activity-7301384179869507584-Oz6k?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEbXOlIBq6apVMLzAn9FUv1dX_UA7q3sNSA",
@@ -25,19 +25,17 @@ def linkedin_page():
         },
     ]
 
-
-
     return rx.vstack(
         # Primera fila (dos boxes)
         rx.hstack(
-            linkedin_project_box(linkedin_links[0]["link"], linkedin_links[0]["image_url"], linkedin_links[0]["description"]),
-            linkedin_project_box(linkedin_links[1]["link"], linkedin_links[1]["image_url"], linkedin_links[1]["description"]),
+            linkedin_project_box(linkedin_links[0]["link"], linkedin_links[0]["image_url"], linkedin_links[0]["description"], font_family=font_family),
+            linkedin_project_box(linkedin_links[1]["link"], linkedin_links[1]["image_url"], linkedin_links[1]["description"], font_family=font_family),
             spacing="2",
         ),
         # Segunda fila (otros dos boxes)
         rx.hstack(
-            linkedin_project_box(linkedin_links[2]["link"], linkedin_links[2]["image_url"], linkedin_links[2]["description"]),
-            linkedin_project_box(linkedin_links[3]["link"], linkedin_links[3]["image_url"], linkedin_links[3]["description"]),
+            linkedin_project_box(linkedin_links[2]["link"], linkedin_links[2]["image_url"], linkedin_links[2]["description"], font_family=font_family),
+            linkedin_project_box(linkedin_links[3]["link"], linkedin_links[3]["image_url"], linkedin_links[3]["description"], font_family=font_family),
             spacing="2",
         ),
         spacing="2",  # Espacio entre las filas
@@ -45,10 +43,9 @@ def linkedin_page():
         justify_content="center",
         padding="24px",
     )
-    
-    
-    
-def linkedin_page_freelance():
+
+
+def linkedin_page_freelance(font_family="Tektur"):
     linkedin_links = [
         {
             "link": "https://www.linkedin.com/posts/facundo-boladeras-382043292_m%C3%A9todo-kde-para-estimar-densidades-generar-activity-7301384179869507584-Oz6k?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEbXOlIBq6apVMLzAn9FUv1dX_UA7q3sNSA",
@@ -65,8 +62,8 @@ def linkedin_page_freelance():
     return rx.vstack(
         # Una única fila (dos boxes)
         rx.hstack(
-            linkedin_project_box(linkedin_links[0]["link"], linkedin_links[0]["image_url"], linkedin_links[0]["description"]),
-            linkedin_project_box(linkedin_links[1]["link"], linkedin_links[1]["image_url"], linkedin_links[1]["description"]),
+            linkedin_project_box(linkedin_links[0]["link"], linkedin_links[0]["image_url"], linkedin_links[0]["description"], font_family=font_family),
+            linkedin_project_box(linkedin_links[1]["link"], linkedin_links[1]["image_url"], linkedin_links[1]["description"], font_family=font_family),
             spacing="2",
         ),
         spacing="2",
