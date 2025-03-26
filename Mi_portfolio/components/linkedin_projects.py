@@ -40,7 +40,7 @@ def linkedin_project_box(link, image_url, description=None, font_family="Tektur"
         display="flex",
         justify_content="center",
         flex_direction="column",
-        background="#ffffff",                   # Fondo blanco para la tarjeta
+        background="#FCF5E5",                   # Fondo blanco para la tarjeta
         on_click=lambda: rx.redirect(link),     # Hace que todo el box sea clickeable
         cursor="pointer",
                 _hover={

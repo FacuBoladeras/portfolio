@@ -4,7 +4,7 @@ from Mi_portfolio.components.footer import footer
 from Mi_portfolio.components.project_card import project_card
 from Mi_portfolio.pages.projects import projects_page
 from Mi_portfolio.pages.linkedin import linkedin_page,linkedin_page_freelance
-from Mi_portfolio.pages.stack import stack
+from Mi_portfolio.pages.stack import grid_page_with_icons_vhstack
 from Mi_portfolio.constants.tipografia import PIXEL_FONT_SMALL,PIXEL_FONT_MEDIUM, PIXEL_FONT_LARGE
 from Mi_portfolio.constants.styles import PADDING_SMALL, PADDING_MEDIUM, MARGIN_MEDIUM, MAX_WIDTH_MEDIUM
 
@@ -15,7 +15,7 @@ def index():
         rx.text("Experience", size='9',  weight="bold",   high_contrast=True,   font_family="Pixelify Sans",    class_name="title-secondary", padding="0px" ),        
         projects_page(font_family="Doto"),
         rx.text("Technology stack", size='9', weight="bold", high_contrast=True,font_family="Pixelify Sans", class_name="title-secondary"),
-        stack(),
+        grid_page_with_icons_vhstack(),
         rx.text("GIS projects and skills", size='9', weight="bold", high_contrast=True,font_family="Pixelify Sans", class_name="title-secondary"),
         linkedin_page(font_family="Pixelify Sans"),
         rx.text("Freelance Projects", size='9', weight="bold", high_contrast=True,font_family="Pixelify Sans", class_name="title-secondary"),
