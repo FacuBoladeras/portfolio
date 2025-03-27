@@ -1,6 +1,26 @@
 import reflex as rx
 from Mi_portfolio.components.project_card import project_card
-from Mi_portfolio.constants.styles import SPACING_MEDIUM, PADDING_MEDIUM
+from Mi_portfolio.constants.styles import SPACING_MEDIUM, PADDING_MEDIUM,PADDING_SMALL
+CARD_WIDTH = 400
+CARD_SPACING = 16
+
+def projects_page(font_family):
+    return rx.container(
+        rx.flex(
+            *[
+                project_card(p["color"], p["image"], p["items"], font_family=font_family)
+                for p in projects
+            ],
+            direction={"base": "column", "md": "row"},
+            wrap="wrap",
+            spacing=SPACING_MEDIUM,
+            align="center",
+            justify="center",
+            width="100%",
+        ),
+        center_content=True,
+        padding=PADDING_MEDIUM,
+    )
 
 
 projects = [
@@ -10,7 +30,7 @@ projects = [
         "items": [
             "+4 years",
             "Research",
-            "GIS/Python",
+            "Python/GIS",
         ]
     },
     {
@@ -19,7 +39,7 @@ projects = [
         "items": [
             "+2 years",
             "Research",
-            "GIS/Science",            
+            "Python/GIS",            
         ]
     },
     {
@@ -47,22 +67,22 @@ CARD_WIDTH = 400
 CARD_SPACING = 16
 
 def projects_page(font_family):
-    return rx.vstack(
-        rx.hstack(
-            # ✅ Iteración directa sobre la lista de diccionarios
+    return rx.container(
+        rx.flex(
             *[
                 project_card(p["color"], p["image"], p["items"], font_family=font_family)
                 for p in projects
             ],
-            spacing=SPACING_MEDIUM,
-            align_items="center",
-            justify_content="flex-start",
+            direction={"base": "column", "md": "row"},
+            wrap="wrap",
+            spacing="2",
+            align="center",
+            justify="start",  # 👈 Cambiado aquí
+            width="100%",
         ),
-        padding=PADDING_MEDIUM,
-        align_items="center",
-        justify_content="center",
-        width="100%",
+        center_content=True,
+        padding="0px",
+        max_width="100%",  # 👈 asegura que aproveche toda la pantalla
     )
-
 
 

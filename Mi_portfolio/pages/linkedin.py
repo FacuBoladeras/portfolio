@@ -25,23 +25,20 @@ def linkedin_page(font_family="Tektur"):
         },
     ]
 
-    return rx.vstack(
-        # Primera fila (dos boxes)
-        rx.hstack(
-            linkedin_project_box(linkedin_links[0]["link"], linkedin_links[0]["image_url"], linkedin_links[0]["description"], font_family=font_family),
-            linkedin_project_box(linkedin_links[1]["link"], linkedin_links[1]["image_url"], linkedin_links[1]["description"], font_family=font_family),
-            spacing="2",
+    return rx.container(
+        rx.flex(
+            *[
+                linkedin_project_box(link["link"], link["image_url"], link["description"], font_family=font_family)
+                for link in linkedin_links
+            ],
+            direction={"base": "column", "md": "row"},
+            wrap="wrap",
+            spacing="1",
+            justify="center",
+            align="center",
         ),
-        # Segunda fila (otros dos boxes)
-        rx.hstack(
-            linkedin_project_box(linkedin_links[2]["link"], linkedin_links[2]["image_url"], linkedin_links[2]["description"], font_family=font_family),
-            linkedin_project_box(linkedin_links[3]["link"], linkedin_links[3]["image_url"], linkedin_links[3]["description"], font_family=font_family),
-            spacing="2",
-        ),
-        spacing="2",  # Espacio entre las filas
-        align_items="center",
-        justify_content="center",
-        padding="2px",
+        center_content=True,
+        padding="10px",
     )
 
 
@@ -59,15 +56,18 @@ def linkedin_page_freelance(font_family="Tektur"):
         }
     ]
 
-    return rx.vstack(
-        # Una única fila (dos boxes)
-        rx.hstack(
-            linkedin_project_box(linkedin_links[0]["link"], linkedin_links[0]["image_url"], linkedin_links[0]["description"], font_family=font_family),
-            linkedin_project_box(linkedin_links[1]["link"], linkedin_links[1]["image_url"], linkedin_links[1]["description"], font_family=font_family),
-            spacing="2",
+    return rx.container(
+        rx.flex(
+            *[
+                linkedin_project_box(link["link"], link["image_url"], link["description"], font_family=font_family)
+                for link in linkedin_links
+            ],
+            direction={"base": "column", "md": "row"},
+            wrap="wrap",
+            spacing="8",
+            justify="center",
+            align="center",
         ),
-        spacing="2",
-        align_items="center",
-        justify_content="center",
-        padding="2px",
+        center_content=True,
+        padding="10px",
     )

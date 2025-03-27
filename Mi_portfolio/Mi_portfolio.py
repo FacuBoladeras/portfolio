@@ -10,28 +10,33 @@ from Mi_portfolio.constants.styles import PADDING_SMALL, PADDING_MEDIUM, MARGIN_
 
 
 def index():
-    return rx.vstack(
-        header(title_font_family="Pixelify Sans", title_class_name="title-primary", content_font_family="Tektur", content_class_name="content_header"),
-        rx.text("Experience", size='9',  weight="bold",   high_contrast=True,   font_family="Pixelify Sans",    class_name="title-secondary", padding="0px" ),        
-        projects_page(font_family="Doto"),
-        rx.text("Technology stack", size='9', weight="bold", high_contrast=True,font_family="Pixelify Sans", class_name="title-secondary"),
-        grid_page_with_icons_vhstack(),
-        rx.text("GIS projects and skills", size='9', weight="bold", high_contrast=True,font_family="Pixelify Sans", class_name="title-secondary"),
-        linkedin_page(font_family="Pixelify Sans"),
-        rx.text("Freelance Projects", size='9', weight="bold", high_contrast=True,font_family="Pixelify Sans", class_name="title-secondary"),
-        linkedin_page_freelance(font_family="Pixelify Sans"),
-        footer(font_family="Pixelify Sans", class_name="content"),
-        spacing="9",
-        align_items="center",
-        justify_content="center",
-        padding=PADDING_SMALL,
+    return rx.container(
+        rx.vstack(
+            header(title_font_family="Pixelify Sans", title_class_name="title-primary", content_font_family="Tektur", content_class_name="content_header"),
+            rx.text("Experience", size='9', weight="bold", high_contrast=True, font_family="Pixelify Sans", class_name="title-secondary", padding="0px"),        
+            projects_page(font_family="Doto"),
+            rx.text("Technology stack", size='9', weight="bold", high_contrast=True, font_family="Pixelify Sans", class_name="title-secondary"),
+            grid_page_with_icons_vhstack(),
+            rx.text("GIS projects and skills", size='9', weight="bold", high_contrast=True, font_family="Pixelify Sans", class_name="title-secondary"),
+            linkedin_page(font_family="Pixelify Sans"),
+            rx.text("Freelance Projects", size='9', weight="bold", high_contrast=True, font_family="Pixelify Sans", class_name="title-secondary"),
+            linkedin_page_freelance(font_family="Pixelify Sans"),
+            footer(font_family="Pixelify Sans", class_name="content"),
+            spacing="9",
+            align_items="center",
+            justify_content="center",
+            padding=PADDING_SMALL,
+            width="100%",  # 👈 ¡Aquí está la clave!
+        ),
+        max_width="100%",
+        padding="0",
+        center_content=True,
         style={
-            "background": "linear-gradient(#240046, #d86aff, #FFFFFF)",  # Degradado de color
-            "width": "100%",  # Asegurarse de que el gradiente cubra todo el ancho
-            "height": "100%",  # Asegurarse de que el gradiente cubra toda la altura
+            "background": "linear-gradient(#240046, #d86aff, #FFFFFF)",
+            "width": "100%",
+            "min_height": "100vh",
         },
     )
-
 
 app = rx.App(
     stylesheets=[
