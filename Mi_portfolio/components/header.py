@@ -71,6 +71,6 @@ def header(title_font_family="Tektur", title_class_name="title-primary", content
             spacing="1",
         ),
         # Agrega padding superior aquí
-        padding_top="80px",
+        padding_top="100px",
         padding_bottom="80px"# Ajusta este valor según lo que necesites
     )

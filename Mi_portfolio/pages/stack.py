@@ -16,20 +16,20 @@ def grid_page_with_icons_vhstack():
         row_items = [
             rx.box(
                 rx.image(
-                    src=logos[j % len(logos)],  # Reutiliza logos si hay más celdas que imágenes
+                    src=logos[j % len(logos)],
                     width="60px",
-                    height="60px",  # Aseguramos que todas las imágenes tengan el mismo tamaño
+                    height="60px",
                     border_radius="10px",
                     alt=f"Logo {j + 1}",
                 ),
                 width="100px",
                 height="100px",
-                border="1px dotted #e0e0e0",
-                background="#FCF5E5",
                 display="flex",
                 align_items="center",
                 justify_content="center",
+                **({"border": "2px dotted #000", "background": "#FFDEAD"} if j == 0 and i < 3 else {"border": "1px dotted #e0e0e0", "background": "#FCF5E5"})
             )
+
             for j in range(5)  # Cada fila tiene 5 celdas
         ]
         rows.append(rx.hstack(*row_items, spacing="0"))

@@ -14,12 +14,12 @@ def linkedin_page(font_family="Tektur"):
             "description": "Machine learning/Deep learning: training ML and DL models using Python"
         },
         {
-            "link": "https://www.linkedin.com/posts/facundo-boladeras-382043292_mofuss-python-globalecosystemsdynamicinvestigation-activity-7224546612184850434-HLmc?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEbXOlIBq6apVMLzAn9FUv1dX_UA7q3sNSA",
+            "link": "https://www.linkedin.com/posts/facundo-boladeras-382043292_geemap-python-activity-7218685252397875201-5-B5?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEbXOlIBq6apVMLzAn9FUv1dX_UA7q3sNSA",
             "image_url": "/grafico-dispersion.png",
             "description": "Biomass estimate: generating biomass estimation models using Python and Google Earth Engine"
         },
         {
-            "link": "https://www.linkedin.com/posts/facundo-boladeras-382043292_python-aws-lambda-activity-7168324246182604800-54qb?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEbXOlIBq6apVMLzAn9FUv1dX_UA7q3sNSA",
+            "link": "https://www.linkedin.com/posts/facundo-boladeras-382043292_mofuss-python-globalecosystemsdynamicinvestigation-activity-7224546612184850434-HLmc?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEbXOlIBq6apVMLzAn9FUv1dX_UA7q3sNSA",
             "image_url": "/time-serie.png",
             "description": "International: generating time series of AGB maps for international projects"
         },
