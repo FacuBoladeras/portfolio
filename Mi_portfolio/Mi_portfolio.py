@@ -32,11 +32,11 @@ def index():
         padding="0",
         center_content=True,
         style={
-            "background-image": "linear-gradient(to bottom, transparent 60%, black 100%), url('/background.png')",
-            "background-size": "cover, 100%",  # 👈 primero para gradiente, segundo para imagen
+            "background-image": "linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.7) 50%, black 100%), url('background.png')",
+            "background-size": "cover, auto 50%",  # 👈 gradiente cubre todo, imagen al 60% de alto original
             "background-position": "center, top center",
             "background-repeat": "no-repeat, no-repeat",
-            "background-color": "black",  # fondo negro de respaldo
+            "background-color": "black",
             "width": "100%",
             "min_height": "100vh",
         },
