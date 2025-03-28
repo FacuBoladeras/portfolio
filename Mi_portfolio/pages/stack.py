@@ -3,7 +3,7 @@ import reflex as rx
 def grid_page_with_icons_vhstack():
     grid = [
         ["/icons8-python-96.png", "/sklearn.png", "/tensorflow.png", "/FastAPI.png", "/Streamlit.png"],
-        ["/satelite.png", "/qgis.png", "/icons8-google-earth-96.png", "/geopandas.png", None],
+        ["/satelite.png", "/qgis.png", "/earth-engine.png", "/geopandas.png", None],
         ["/informatica.png", "/icons8-aws-96.png", "/icons8-mysql-96.png", "/icons8-git-96.png", "/docker.png"],
     ]
 

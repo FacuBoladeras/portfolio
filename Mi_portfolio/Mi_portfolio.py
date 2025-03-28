@@ -26,17 +26,22 @@ def index():
             align_items="center",
             justify_content="center",
             padding=PADDING_SMALL,
-            width="100%",  # 👈 ¡Aquí está la clave!
+            width="100%",
         ),
         max_width="100%",
         padding="0",
         center_content=True,
         style={
-            "background": "linear-gradient(#240046, #d86aff, #FFFFFF)",
+            "background-image": "linear-gradient(to bottom, transparent 60%, black 100%), url('/background.png')",
+            "background-size": "cover, 100%",  # 👈 primero para gradiente, segundo para imagen
+            "background-position": "center, top center",
+            "background-repeat": "no-repeat, no-repeat",
+            "background-color": "black",  # fondo negro de respaldo
             "width": "100%",
             "min_height": "100vh",
         },
     )
+
 
 app = rx.App(
     stylesheets=[

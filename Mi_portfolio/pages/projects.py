@@ -56,7 +56,7 @@ projects = [
         "image": "/deorigen_la_logo.jpg",
         "items": [
             "+1 year",
-            "Developed",
+            "Developing",
             "Python/GIS",
         ]
     },
